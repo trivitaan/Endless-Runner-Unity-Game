@@ -13,6 +13,13 @@ public class CharacterMoveController : MonoBehaviour
     public float moveAccel;
     public float maxSpeed;
 
+    [Header("GameOver")]
+    public GameObject gameOverScreen;
+    public float fallPositionY;
+
+    [Header("Camera")]
+    public CameraMoveController gameCamera;
+
     [Header("Scoring")]
     public ScoreController score;
     public float scoringRatio;
@@ -48,13 +55,33 @@ public class CharacterMoveController : MonoBehaviour
         anim.SetBool("isOnGround", isOnGround);
 
         //calculate score
-        int distancePassed = Mathf.FloorToInt(transform.position.x + lastPositionX);
+        int distancePassed = Mathf.FloorToInt(transform.position.x - lastPositionX);
         int scoreIncrement = Mathf.FloorToInt(distancePassed / scoringRatio);
         if(scoreIncrement > 0)
         {
             score.IncreaseCurrentScore(scoreIncrement);
             lastPositionX += distancePassed;
         }
+
+        if(transform.position.y < fallPositionY)
+        {
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        //set High Score
+        score.FinishScoring();
+
+        //stop camera movement
+        gameCamera.enabled = false;
+
+        //show game over 
+        gameOverScreen.SetActive(true);
+
+        //disable this
+        this.enabled = false;
     }
 
     private void FixedUpdate()
