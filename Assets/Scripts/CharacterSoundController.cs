@@ -7,7 +7,6 @@ public class CharacterSoundController : MonoBehaviour
     public AudioClip jump;
     private AudioSource audioPlayer;
     public AudioClip scoreHighlight;
-    
 
     public void PlayScoreHighlight()
     {
