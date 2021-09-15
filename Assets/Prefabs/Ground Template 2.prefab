@@ -90,13 +90,13 @@ CompositeCollider2D:
         Y: 13800000
   - m_Collider: {fileID: 1320412842}
     m_ColliderPaths:
-    - - X: 76400000
+    - - X: 50200000
         Y: 26599998
-      - X: 63600000
+      - X: 37400004
         Y: 26599998
-      - X: 63600000
+      - X: 37400004
         Y: 13800000
-      - X: 76400000
+      - X: 50200000
         Y: 13800000
   - m_Collider: {fileID: 1352277149}
     m_ColliderPaths:
@@ -134,13 +134,9 @@ CompositeCollider2D:
       - {x: 10.2, y: 1.38}
       - {x: 10.2, y: 2.6599998}
       - {x: 7.640001, y: 2.6599998}
-    - - {x: 7.64, y: 2.6599998}
-      - {x: 6.36, y: 2.6599998}
-      - {x: 6.36, y: 1.38}
-      - {x: 7.64, y: 1.38}
     - - {x: 1.2400001, y: 1.38}
-      - {x: 3.7999997, y: 1.38}
-      - {x: 3.7999997, y: 2.6599998}
+      - {x: 5.02, y: 1.38}
+      - {x: 5.02, y: 2.6599998}
       - {x: 1.2400001, y: 2.6599998}
   m_VertexDistance: 0.0005
 --- !u!114 &6884889543465619450
@@ -185,7 +181,7 @@ GameObject:
   - component: {fileID: 1060958272}
   - component: {fileID: 1060958271}
   - component: {fileID: 1060958270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +287,7 @@ GameObject:
   - component: {fileID: 1300494935}
   - component: {fileID: 1300494934}
   - component: {fileID: 1300494933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +393,7 @@ GameObject:
   - component: {fileID: 1320412844}
   - component: {fileID: 1320412843}
   - component: {fileID: 1320412842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320412841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: 2.02, z: 0.13868597}
+  m_LocalPosition: {x: 4.38, y: 2.02, z: 0.13868597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 609032829}
@@ -503,7 +499,7 @@ GameObject:
   - component: {fileID: 1352277151}
   - component: {fileID: 1352277150}
   - component: {fileID: 1352277149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +605,7 @@ GameObject:
   - component: {fileID: 1473842734}
   - component: {fileID: 1473842733}
   - component: {fileID: 1473842732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

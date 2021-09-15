@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9128823602441492823}
   - component: {fileID: 9128823602441492822}
   - component: {fileID: 9128823602441492821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 9128823602563058662}
   - component: {fileID: 9128823602563058661}
   - component: {fileID: 9128823602563058660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 9128823602614131738}
   - component: {fileID: 9128823602614131737}
   - component: {fileID: 9128823602614131736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 9128823602658148255}
   - component: {fileID: 9128823602658148254}
   - component: {fileID: 9128823602658148253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 9128823602673869668}
   - component: {fileID: 9128823602673869667}
   - component: {fileID: 9128823602673869666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 9128823602951288200}
   - component: {fileID: 9128823602951288311}
   - component: {fileID: 9128823602951288310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 2468227839357161278}
   - component: {fileID: 2882444775857549755}
   - component: {fileID: 3787765992186268213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground Template 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 9128823603797246127}
   - component: {fileID: 9128823603797246126}
   - component: {fileID: 9128823603797246125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

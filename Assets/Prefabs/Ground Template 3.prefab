@@ -258,13 +258,13 @@ CompositeCollider2D:
         Y: 13800000
   - m_Collider: {fileID: 1320412842}
     m_ColliderPaths:
-    - - X: 76400000
+    - - X: 89300000
         Y: 26599998
-      - X: 63600000
+      - X: 76500000
         Y: 26599998
-      - X: 63600000
+      - X: 76500000
         Y: 13800000
-      - X: 76400000
+      - X: 89300000
         Y: 13800000
   - m_Collider: {fileID: 1300494933}
     m_ColliderPaths:
@@ -286,14 +286,10 @@ CompositeCollider2D:
       - {x: 6.359999, y: 1.38}
       - {x: 6.359999, y: 2.6599998}
       - {x: 3.800001, y: 2.6599998}
-    - - {x: 7.64, y: 2.6599998}
-      - {x: 6.36, y: 2.6599998}
-      - {x: 6.36, y: 1.38}
-      - {x: 7.64, y: 1.38}
-    - - {x: 10.2, y: 2.6599998}
-      - {x: 8.919999, y: 2.6599998}
-      - {x: 8.919999, y: 1.38}
+    - - {x: 7.65, y: 1.38}
       - {x: 10.2, y: 1.38}
+      - {x: 10.2, y: 2.6599998}
+      - {x: 7.65, y: 2.6599998}
   m_VertexDistance: 0.0005
 --- !u!1 &1060958269
 GameObject:
@@ -639,7 +635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320412841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: 2.02, z: 0.13868597}
+  m_LocalPosition: {x: 8.29, y: 2.02, z: 0.13868597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 609032829}

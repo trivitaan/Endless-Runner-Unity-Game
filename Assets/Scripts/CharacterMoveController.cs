@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterMoveController : MonoBehaviour
 {
+    public float lastPositionX;
+    private Rigidbody2D rig;
     private Animator anim;
     private CharacterSoundController sound;
 
@@ -11,7 +13,9 @@ public class CharacterMoveController : MonoBehaviour
     public float moveAccel;
     public float maxSpeed;
 
-    private Rigidbody2D rig;
+    [Header("Scoring")]
+    public ScoreController score;
+    public float scoringRatio;
 
     [Header("Jump")]
     public float jumpAccel;
@@ -42,13 +46,19 @@ public class CharacterMoveController : MonoBehaviour
         }
         //change animation 
         anim.SetBool("isOnGround", isOnGround);
+
+        //calculate score
+        int distancePassed = Mathf.FloorToInt(transform.position.x + lastPositionX);
+        int scoreIncrement = Mathf.FloorToInt(distancePassed / scoringRatio);
+        if(scoreIncrement > 0)
+        {
+            score.IncreaseCurrentScore(scoreIncrement);
+            lastPositionX += distancePassed;
+        }
     }
 
     private void FixedUpdate()
     {
-        Vector2 velocityVector = rig.velocity; //speed of object (character)
-       
-
         //raycast ground
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, groundRaycastDistance, groundLayerMask);
         if(hit)
@@ -63,6 +73,8 @@ public class CharacterMoveController : MonoBehaviour
                 isOnGround = false;
             }
 
+        
+        Vector2 velocityVector = rig.velocity; //speed of object (character)
         //calculate velocity vector
         if(isJumping)
         {
