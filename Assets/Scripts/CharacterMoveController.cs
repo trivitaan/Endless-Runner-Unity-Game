@@ -15,8 +15,20 @@ public class CharacterMoveController : MonoBehaviour
     public float groundRaycastDistance;
     public LayerMask groundLayerMask;
 
+    [Header("Scoring")]
+    public ScoreController score;
+    public float scoringRatio;
+
+    [Header("Game Over")]
+    public GameObject gameOverScreen;
+    public float fallPositionY;
+
+    [Header("Camera")]
+    public CameraMoveController gameCamera;
+
     private bool isJumping;
     private bool isOnGround;
+    private float lastPositionX;
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -28,6 +40,7 @@ public class CharacterMoveController : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audio = GetComponent<CharacterSoundController>();
+        lastPositionX = transform.position.x;
     }
 
     private void Update()
@@ -43,7 +56,22 @@ public class CharacterMoveController : MonoBehaviour
         //change bool value for animator
         anim.SetBool("isOnGround", isOnGround);
 
-       
+        //calculate score
+        int distancePassed = Mathf.FloorToInt(transform.position.x - lastPositionX);
+        int scoreIncrement = Mathf.FloorToInt(distancePassed/scoringRatio);
+
+        if(scoreIncrement > 0)
+        {
+            score.IncreaseCurrentScore(scoreIncrement);
+            lastPositionX +=distancePassed;
+        }
+
+        //GAMEOVER
+        if(transform.position.y < fallPositionY)
+        {
+            GameOver();
+        }
+
     }
 
     void FixedUpdate()
@@ -74,6 +102,17 @@ public class CharacterMoveController : MonoBehaviour
 
         rig.velocity = velocityVector;
         
+    }
+
+    private void GameOver()
+    {
+        score.FinishScoring();
+        //stop camera movement
+        gameCamera.enabled = false;
+        //turn on game over panel
+        gameOverScreen.SetActive(true);
+        
+        this.enabled = false;
     }
 
     private void OnDrawGizmos()
